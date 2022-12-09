@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // data-index（何番目を操作しているか）を取得
     const dataIndex = e.target.getAttribute('data-index');
-    console.log( dataIndex);
 
     // 古いプレビューが存在する場合は削除
     const alreadyPreview = document.querySelector('.preview');
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function(){
     previewWrapper.setAttribute('data-index', dataIndex);
 
     // 表示する画像を生成
-    const previewImage = document.createElement('img');
+    const previewImage= document.createElement('img');
     previewImage.setAttribute('class', 'preview-image');
     previewImage.setAttribute('src', blob);
 
