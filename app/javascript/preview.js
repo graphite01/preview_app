@@ -52,6 +52,11 @@ document.addEventListener('DOMContentLoaded', function(){
     const file = e.target.files[0];
     const blob = window.URL.createObjectURL(file);
 
+    // data-indexを使用して、既にプレビューが表示されているかを確認する
+    const alreadyPreview = document.querySelector(`.preview[data-index="${dataIndex}"]`);
+
+
+
     buildPreviewImage(dataIndex, blob);
     buildNewFileField();
   };
