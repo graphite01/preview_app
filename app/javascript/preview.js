@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function(){
   // 新規投稿・編集ページのフォームがないならここで終了。「!」は論理否定演算子。
   if (!postForm) return null;
 
+  // 投稿できる枚数の制限を定義
+  const imageLimits = 5;
+
   // プレビュー画像を生成・表示する関数
   const buildPreviewImage = (dataIndex, blob) =>{
     // 画像を表示するためのdiv要素を生成
