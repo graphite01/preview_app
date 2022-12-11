@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function(){
     };
 
     buildPreviewImage(dataIndex, blob);
-    buildNewFileField();
   };
 
   // input要素を取得
