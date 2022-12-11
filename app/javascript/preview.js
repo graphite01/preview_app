@@ -58,6 +58,13 @@ document.addEventListener('DOMContentLoaded', function(){
     const dataIndex = e.target.getAttribute('data-index');
 
     const file = e.target.files[0];
+
+    // fileが空 = 何も選択しなかったのでプレビュー等を削除して終了する
+    if (!file) {
+      deleteImage(dataIndex);
+      return null;
+    };
+    
     const blob = window.URL.createObjectURL(file);
 
     // data-indexを使用して、既にプレビューが表示されているかを確認する
