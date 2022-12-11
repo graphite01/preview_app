@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // 生成したHTMLの要素をブラウザに表示させる
     previewWrapper.appendChild(previewImage);
+    previewWrapper.appendChild(deleteButton);
     previewList.appendChild(previewWrapper);
   };
 
